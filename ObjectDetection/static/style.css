@@ -1,0 +1,227 @@
+ /*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+/*
+ * Header
+ */
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: rgba(255, 255, 255, .5);
+}
+
+.form-upload {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .form-upload.checkbox {
+    font-weight: 400;
+  }
+  .form-upload .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-upload .form-control:focus {
+    z-index: 2;
+  }
+
+  
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+
+
+
+$dark-grey: #323B40;
+
+.container {
+  padding: 2rem 0rem;
+}
+
+h4{
+  margin: 3rem 0rem 2rem;  
+}
+
+.image-parent {
+  background-color: grey;
+  max-width: 400px;
+  min-height: 300px;
+}
+
+.img-wrapper {
+  width: 10%;
+  margin: 0rem 1.5rem 0rem 0rem;
+}
+
+.img-wrapper-20 {
+  width: 20%;
+  margin: 0rem 1.5rem 0rem 0rem;
+}
+
+.c-container {
+  background-color: grey;
+  border-radius: 0.5rem;
+  padding: 1.2rem 1.2rem;
+  margin: 1rem 0rem;
+}
+
+.overlay-dark {
+  background-color: rgba(black, 0.4);
+}
+
+.overlay-grey {
+  background-color: rgba(#596164, 0.4);
+}
+
+.overlay-yellow {
+  background-color: rgba(#fee140, 0.4);
+}
+
+.overlay-orange {
+  background-color: rgba(#c43a30, 0.4);
+}
+
+.overlay-blue-gradient {
+  background-image: linear-gradient(135deg, rgba(#96deda, 0.5) 0%, rgba(#537895, 0.7) 100%);
+}
+
+
+.image-container {
+  width:600px;
+  text-align:center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+
+
+/* Chrome, Safari, AND NOW ALSO the Edge Browser and Firefox */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  div{top:10;} 
+}
+
+/* Chrome 29+ */
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+    div{top:0;} 
+}
