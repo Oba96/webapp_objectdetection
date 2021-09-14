@@ -1,0 +1,91 @@
+<!doctype html>
+<html >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+<title>Object Detection System</title>
+<!-- Importing some bootstrap to make the website look better and more professional -->
+<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
+
+<!-- This is about the bootstrap css that i downloaded and the save in css folder -->
+<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- This is my own css file which contains the website stlying -->
+<!-- I added the function to visualize the image-->
+<link href="/static/style.css" rel="stylesheet">
+<link rel="icon" href="data:,">
+<script>
+    funtion init() {
+      var inputFile = document.getElementById('InputFile1');
+      inputFile.addEventListener('change', mostrarImagen, false);
+    }
+    funtion mostrarImagen(event) {
+      var file = event.target.files[0];
+      var reader = new Filereader();
+      reader.onload = funtion (event) {
+          var img = document.getElementById('imagen');
+          img.src = event.target.results;
+          img.width = 500;
+          img.height = 500;
+      }
+      reader.readAsDataURL(file);
+    }
+    window.addEventListener('load', init, false);
+   </script> 
+</head>
+
+  <body class="text-center">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Animal Object Detection System</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="/">Home</a>
+            <a class="nav-link" href="/">Results</a>
+            <a class="nav-link" href="/info">Info</a>
+          </nav>
+          
+        </div>
+        
+        
+      </header>
+      {% with messages = get_flashed_messages() %}
+          {% if messages %}
+
+              {% for message in messages %}
+                  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                   <span>{{ message }}</span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+              {% endfor %}
+
+          {% endif %}
+          {% endwith %}
+      {% block main %}{% endblock %}
+    <div class="form-group">
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Upload Image.</h1>
+        <p class="lead">Please remember to uplad the right file format. Formats are : .jpg, .jpeg, .png</p>
+        <p class="lead">
+          <form action="upload" method="post" class="form-upload" enctype="multipart/form-data" >
+      <label for="FileUpload" class="sr-only">Upload your image here...</label>
+      <input type="file" id="InputFile1" name="image" class="form-control" >
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    </form>
+        </p>
+      </main>
+    </div>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Company leader in animal classification <Bootstrap</a>, by Zoo Inc.</a>.</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

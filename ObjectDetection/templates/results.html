@@ -1,0 +1,78 @@
+<!doctype html>
+<html >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+<title>Object Detection System</title>
+
+<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
+<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static/style.css" rel="stylesheet">
+<link rel="icon" href="data:,">
+
+</head>
+
+  <body class="text-center">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Animal Object Detection System</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href='/'>Home</a>
+            <a class="nav-link" href>Results</a>
+            <a class="nav-link" href="/info">Info</a>
+          </nav>
+        </div>
+      </header>
+
+<body>
+
+<h1 class="cover-heading">Image detection.</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Image filename</th>
+      <th scope="col">Object/s detected + Associated Probability</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>{{ filename }}</td>
+      <td>{{ result }} % </td>
+    
+    </tr>
+    </table>
+    <div class="row">
+      <div class="col-md-5">
+          <div class="image-container">
+              <p class="text-center"><b>Original Image</b></p>     
+              <a href="/static/uploads/img/upload/{{ filename }}" target="_new"><img src="/static/uploads/img/upload/{{ filename }}" class="upload-image-thumb"></a>
+          </div>
+          <div class="row">
+            <div class="col-md-5"> 
+            <div class="image-container">
+                <p class="text-center"><b>Detected Image</b></p>
+                <a href="/static/uploads/img/detection/{{ filename }}" target="_new"><img src="/static/uploads/img/detection/{{ filename }}" class="upload-image-thumb"></a> 
+            </div>
+        </div>
+</div>
+   
+    
+<div class="end">
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Company leader in animal classification <Bootstrap</a>, by Zoo Inc.</a>.</p>
+        </div>
+      </footer>
+    </div>
+</body>
+</html>
+
+      
